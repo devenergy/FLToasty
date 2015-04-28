@@ -28,5 +28,11 @@ or add tap handling if you need it.
               }];
 ```
 
+Control toast look with appearance proxy.
+
+```
+[FLToasty appearance].font = [UIFont fontWithName:@"FiraSans-Regular" size:14.0f];
+```
+
 That's all! Well done!
 
