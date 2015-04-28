@@ -12,9 +12,21 @@ Add to your Podfile
 
 `pod 'FLToasty', :git => 'https://github.com/devenergy/FLToasty'`
 
-Import and write in a single line something like this.
+Import and type something like this.
 
-`[FLToasty showInfo:NSLocalizedString(@"toast_share_later", @"Popup toast says You can share later") inView:self.view];`
+```
+[FLToasty showInfo:NSLocalizedString(@"toast_share_later", @"Popup toast says You can share later") inView:self.view];
+```
+
+or add tap handling if you need it.
+
+```
+[FLToasty showInfo:NSLocalizedString(@"toast_delete_card_undo", @"Popup toast says UNDO when delete card") 
+          inView:self.view 
+          didTapBlock:^{
+                [self.model undoRoomDeletion:r.identifier];
+              }];
+```
 
 That's all! Well done!
 
